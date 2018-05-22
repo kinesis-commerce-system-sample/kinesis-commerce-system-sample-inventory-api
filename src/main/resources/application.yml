@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    default: local
+    active: local
+
+security:
+  basic:
+    enabled: false
+

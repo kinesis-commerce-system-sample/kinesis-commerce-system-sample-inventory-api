@@ -1,0 +1,33 @@
+spring:
+  profiles: aws_verification
+
+server:
+  port: 8080
+
+log:
+  path:
+    all:
+      name: app.log
+      dir:
+        current: log
+        history: log/history
+      histsize: 7
+    error:
+      name: error.log
+      dir:
+        current: log
+        history: log/history
+      histsize: 7
+  level:
+    app: DEBUG
+    root: INFO
+
+application:
+  kinesis:
+    order:
+      stream-name: kinesis-commerce-system-sample-order-stream
+    purchase:
+      stream-name: kinesis-commerce-system-sample-purchase-stream
+    inventory:
+      stream-name: kinesis-commerce-system-sample-inventory-stream
+

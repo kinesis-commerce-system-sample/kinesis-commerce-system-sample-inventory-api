@@ -1,0 +1,33 @@
+spring:
+  profiles: local
+
+server:
+  port: 8082
+
+log:
+  path:
+    all:
+      name: app.log
+      dir:
+        current: tmp/log
+        history: tmp/log/history
+      histsize: 2
+    error:
+      name: error.log
+      dir:
+        current: tmp/log
+        history: tmp/log/history
+      histsize: 2
+  level:
+    app: DEBUG
+    root: INFO
+
+application:
+  kinesis:
+    order:
+      stream-name: kinesis-commerce-system-sample-order-stream
+    purchase:
+      stream-name: kinesis-commerce-system-sample-purchase-stream
+    inventory:
+      stream-name: kinesis-commerce-system-sample-inventory-stream
+

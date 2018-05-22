@@ -1,0 +1,1 @@
+package com.example.kinesiscommercesystemsample.inventory.api.mom;
